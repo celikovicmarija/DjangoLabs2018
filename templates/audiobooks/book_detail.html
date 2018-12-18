@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audiobooks in Django</title>
+</head>
+<body>
+
+    <h3>{{ audiobook.title }}</h3>
+    {% if audiobook.author %}
+        <p>Author: <strong>{{ audiobook.author }}</strong></p>
+    {% endif %}
+    {% if audiobook.narrator %}
+        <p>Narrator: <strong>{{ audiobook.narrator }}</strong></p>
+    {% endif %}
+    {% if audiobook.length %}
+        <p>Length: <strong>{{ audiobook.format_length }}</strong></p>
+    {% endif %}
+    {% if audiobook.released_date %}
+        <p>Release date: <strong>{{ audiobook.format_date }}</strong></p>
+    {% endif %}
+
+    <h4>Reviews:</h4>
+    {% if audiobook.review_set.all.count > 0 %}
+        <ul>
+            {% for review in audiobook.review_set.all %}
+                <li>rating: <strong>{{ review.rating }} star{{ review.rating|pluralize }}</strong>,
+                    comment: {{ review.comment }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Sorry, no reviews yet</p>
+    {% endif %}
+
+</body>
+</html>
