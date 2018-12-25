@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Audiobooks in Django</title>
+    <title>Title</title>
 </head>
 <body>
 
-    <h3>{{ audiobook.title }}</h3>
+<h3>{{ audiobook.title }}</h3>
     {% if audiobook.author %}
         <p>Author: <strong>{{ audiobook.author }}</strong></p>
     {% endif %}
@@ -32,22 +32,8 @@
         <p>Sorry, no reviews yet</p>
     {% endif %}
 
-    <h4>Add new review</h4>
-    <p>
-        {% if error_msg %}
-            {{ error_msg }}
-        {% endif %}
-    </p>
-    <form method="post" action="{% url 'audiobooks:review' audiobook.id %}">
-        {% csrf_token %}
-        <label for="rating">Rating (1-5):</label><br>
-        <input type="text" name="rating"><br>
-        <label for="comment">Comment:</label><br>
-        <input type="text" name="comment"><br>
-        <input type="submit" value="Add review">
-    </form>
-
     <br>
+    <p><a href="{%  url 'audiobooks:detail' audiobook.id %}">Add another review?</a></p>
     <p><a href="{% url 'audiobooks:index' %}">Back to latest releases</a></p>
 
 </body>

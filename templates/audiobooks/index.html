@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audiobooks in Django</title>
+</head>
+<body>
+
+    <h3>Latest releases:</h3>
+    <ul>
+        {% for audiobook in recent_audiobooks %}
+            <li><a href="{% url 'audiobooks:detail' audiobook.id%}">
+                {{ audiobook.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
