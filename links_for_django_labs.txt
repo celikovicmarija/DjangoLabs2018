@@ -1,0 +1,28 @@
+Django tutorial, part 1 - descriptions of the initially created files:
+https://docs.djangoproject.com/en/2.1/intro/tutorial01/
+
+
+Documentation for the various kinds of fields available for Django models:
+https://docs.djangoproject.com/en/2.1/ref/models/fields/
+
+
+Timezone aware datetime fields:
+https://stackoverflow.com/questions/37527186/retrieve-timezone-aware-datetimefield-in-django
+List of time zones:
+https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+How to use double underscores to perform field lookups via the API:
+https://docs.djangoproject.com/en/2.1/topics/db/queries/#field-lookups-intro
+
+
+Complete guideline for creating, retrieving, updating and deleting objects through database-abstraction API:
+https://docs.djangoproject.com/en/2.1/topics/db/queries/
+
+
+Built-in template tags and filters:
+https://docs.djangoproject.com/en/2.1/ref/templates/builtins/
+
+
+Generic class-based views:
+http://ccbv.co.uk/ 
